@@ -1,23 +1,11 @@
-#
-
-I will not support this project anymore.
-Thank you all for your attention :)
-
-Reasons:
-1. The project is too big and hasn't been updated for a long time.
-2. Works only on pc.
-3. There is a great alternative of ~600 lines of code in Python and working on Windows, Linux, MacOS, Android - [MiUnlockTool & MiBypassTool & MiTool](https://github.com/topminipie/awesome-xiaomi-bootloader-unlock#miunlocktool--mibypasstool--mitool)
-
-I don't see the point of this XiaomiToolV2 fork anymore.
-
-#
-
 ## XiaomiToolV2 [Fork](https://github.com/francescotescari/XiaoMiToolV2/compare/refactor/distribution...topminipie:XiaoMiToolV2:main)
 
 [<img alt="CI" src="https://github.com/topminipie/XiaoMiToolV2/actions/workflows/ci.yml/badge.svg">](https://github.com/topminipie/XiaoMiToolV2/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
 
 This is the source code of the Xiaomi bootloader unlocking tool.
+
+Other tools to unlock bootloader Xiaomi devices - [Awesome Xiaomi Bootloader Unlock](https://github.com/topminipie/awesome-xiaomi-bootloader-unlock)
 
 ### State of the project
   - The original XiaomiToolV2 is abandoned and it needed a small correction to make it run on linux.
