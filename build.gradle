@@ -97,7 +97,7 @@ runtime {
 dependencies {
     implementation 'com.github.iBotPeaches:Apktool:2.4.0'
     implementation 'com.google.guava:guava:33.2.1-jre'
-    implementation 'com.google.protobuf:protobuf-java:4.26.1'
+    implementation 'com.google.protobuf:protobuf-java:4.27.0'
     implementation 'com.mortennobel:java-image-scaling:0.8.6'
     implementation 'commons-codec:commons-codec:1.17.0'
     implementation 'commons-io:commons-io:2.16.1'
