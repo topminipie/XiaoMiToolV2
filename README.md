@@ -49,7 +49,7 @@ chmod +x ./res/tools/lin/fastboot
 
 5. Ignore update notifications.
 
-6. [Unlock BootLoader](https://github.com/topminipie/XiaoMiToolV2/wiki/Unlock-BootLoader)
+6. [Unlock BootLoader](https://github.com/topminipie/XiaoMiToolV2/wiki)
 
 ## Credits
 
