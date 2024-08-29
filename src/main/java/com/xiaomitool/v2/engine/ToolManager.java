@@ -23,7 +23,7 @@ import javafx.stage.Stage;
 import org.json.JSONObject;
 
 public class ToolManager {
-  public static final String TOOL_VERSION = "99.9.9";
+  public static final String TOOL_VERSION = "0.1-fork";
   public static final String URL_DONATION = "https://www.xiaomitool.com/V2/donate";
   public static final String TOOL_VERSION_EX = "dev";
   public static final String XMT_HOST = "https://www.xiaomitool.com/V2";

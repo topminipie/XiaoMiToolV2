@@ -1,43 +1,68 @@
-## XiaomiToolV2
+## XiaomiToolV2 [Fork](https://github.com/francescotescari/XiaoMiToolV2/compare/refactor/distribution...topminipie:XiaoMiToolV2:main)
 
-This is the source code of the Xiaomi modding tool XiaomiTool V2 (www.xiaomitool.com)
+[<img alt="CI" src="https://github.com/topminipie/XiaoMiToolV2/actions/workflows/ci.yml/badge.svg">](https://github.com/topminipie/XiaoMiToolV2/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
+
+Source code of Xiaomi bootloader unlocking tool.
+
+Other tools to unlock bootloader Xiaomi devices - [Awesome Xiaomi Bootloader Unlock](https://github.com/topminipie/awesome-xiaomi-bootloader-unlock)
 
 ### State of the project
-The project is currently semi-abandoned because of a bunch of reasons. If you want to fix bugs or do stuff, just fork the repo.
-This project started as a student-level project: many bad practices has been used and bad choices have been made, making this project costly to maintain. For example:
-1. Use of Java (1.8) instead of other, less verbose, languages (eg Kotlin, Python)
-2. No CI or CD, releasing a build for all the OSes is a hassle, and it's easy to introduce bugs.
-3. No documentation
-4. No testing
-5. Bad architecture (no separated modules, circular dependencies, not well-designed classes, ...)
-6. Limited to Xiaomi devices
+  - The original XiaomiToolV2 is abandoned and it needed a small correction to make it run on linux.
 
-Even if some of these points could be fixed fairly easily, the base project is still not good enough to make it worth for me. The required change is so radical that it would be nearly as costly as rewriting the entire thing from scratch.
+### Unlock BootLoader
 
-### Building and Running 
+This fork of XiaoMiTool V2 - [WORKS](https://github.com/topminipie/XiaoMiToolV2/tree/tested) (Tested on a real device - 09.12.2023)
 
-This project uses gradle, therefore you can just clone the repo and use:
+Read [wiki](https://github.com/topminipie/XiaoMiToolV2/wiki).
 
-``` gradlew build ``` and ``` gradlew run ```
+### Building and Running
 
-Building is going to create the jar file only, which is not enough to make XiaoMiTool work: you will also need to bundle it with the resources needed (the `res` directory in the repo).
-Make sure to select the repository branch corresponding to your target platform OS (Windows, Mac, Linux), as the resources files are different.
+1. Install Java 17:
 
-#### Bundling and distributing
+#### Ubuntu
+```sh
+sudo apt install openjdk-17-jdk git
+```
 
-The relative directory `res/tools` must contain the right tools (`adb`, `fastboot` for each platform, also driver related files for Windows) for the target OS. 
-You can get the tools from the different branches of this repository (Windows, Linux, Mac).
-Please keep in mind that `adb` and `fastboot` are NOT the generic ones that you can download from the Internet, but custom ones compiled specifically for the MIUI. If you don't use the ones from this repo, you will lose the possibility of unlocking the bootloader and flashing MIUI roms via stock recovery.
+#### Fedora
+```sh
+sudo dnf install java-17-openjdk-devel git
+```
 
-For the Windows repo, it's also advisable to keep the `res/driver` directory as it contains the driver that XiaoMiTool will install on Windows to be able to connect to the devices. Also, it's advisable to start the program with administrative priviledges (you can use the launch4j launcher to do that) to be able to install the drivers.
+2. Download this repo:
+```sh
+git clone https://github.com/topminipie/XiaoMiToolV2.git && cd XiaoMiToolV2
+```
+or
+```sh
+wget https://github.com/topminipie/XiaoMiToolV2/archive/refs/heads/main.zip && cd XiaoMiToolV2
+```
 
-The java version used for this gradle configuration is java 11, however the source code is compatible with java 1.8, making it possible to compile a version for 32bit jre 1.8.
+3. Build:
+```sh
+./gradlew build
+```
 
-XiaoMiTool V2 uses JavaFX for the gui, therefore if you want to create a bundle, you have to create a JRE image with the JavaFX module. You can get more details on how to do that on the [official JavaFX guide](https://openjfx.io/openjfx-docs/). If you compile the project for JRE 1.8, JavaFX is already bundled in the standard JRE.
+4. Run:
+```sh
+chmod +x ./res/tools/lin/adb
+chmod +x ./res/tools/lin/fastboot
+./gradlew run
+```
 
-If you want to modify the code and create a distributable bundle, the easiest way is probably to take a previous bundle release, extract the files, replace the jar file and repack it. 
+5. Ignore update notifications.
 
-### Issues
+6. [Unlock BootLoader](https://github.com/topminipie/XiaoMiToolV2/wiki)
 
-As stated in the `State of the project` section, this project is semi-abandoned. Don't spend too much time on them, they might just be ignored.
+## Credits
 
+[XiaoMiToolV2 Original](https://github.com/francescotescari/XiaoMiToolV2)
+
+[XiaoMiToolV2 Fork 1](https://github.com/Nik-Kot/XiaoMiToolV2/tree/linux)
+
+[XiaoMiToolV2 Fork 2](https://github.com/tkapias/XiaoMiToolV2)
+
+[Pull Request 1](https://github.com/francescotescari/XiaoMiToolV2/pull/103)
+
+[Pull Request 2](https://github.com/francescotescari/XiaoMiToolV2/pull/98)

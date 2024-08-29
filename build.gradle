@@ -42,7 +42,7 @@ java {
 
 
 javafx {
-    version = '17'
+    version = '19.0.2.1'
     modules = ["javafx.controls", "javafx.fxml", "javafx.web", "javafx.swing"]
 }
 
@@ -92,7 +92,6 @@ runtime {
     }
 
 }
-
 
 dependencies {
     implementation 'com.github.iBotPeaches:Apktool:2.4.0'
