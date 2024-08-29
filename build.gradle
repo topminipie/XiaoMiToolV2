@@ -103,7 +103,7 @@ dependencies {
     implementation 'commons-logging:commons-logging:1.2'
     implementation 'org.apache.commons:commons-compress:1.17'
     implementation 'org.apache.commons:commons-lang3:3.7'
-    implementation 'org.apache.httpcomponents:httpclient:4.5.5'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
     implementation 'org.json:json:20180130'
 }
 
