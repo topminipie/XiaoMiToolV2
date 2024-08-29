@@ -2,7 +2,7 @@ import org.gradle.internal.os.OperatingSystem;
 
 plugins {
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
     //id 'com.github.sherter.google-java-format' version '0.9'
     id "com.github.johnrengelman.shadow" version "7.1.0"
     id 'org.beryx.runtime' version '1.12.6'
